@@ -19,6 +19,12 @@ namespace RestoreMonarchy.AirdropManager3.Patches
                 return true;
             }
 
+            Airdrop airdrop = pluginInstance.AirdropsConfiguration.Instance.GetAirdropById(__instance.id);
+            if (airdrop == null)
+            {
+                return true;
+            }
+
             bool isExploded = ReflectionHelper.GetCarepackageIsExploded(__instance);
             if (isExploded)
             {
@@ -31,8 +37,6 @@ namespace RestoreMonarchy.AirdropManager3.Patches
 
             isExploded = true;
             ReflectionHelper.SetCarepackageIsExploded(__instance, isExploded);
-
-            Airdrop airdrop = pluginInstance.AirdropsConfiguration.Instance.GetAirdropById(__instance.id);
 
             Vector3 position = __instance.transform.position;
 
