@@ -4,11 +4,11 @@
     <TargetFramework>net48</TargetFramework>
 	<LangVersion>latest</LangVersion>
 	<RootNamespace>RestoreMonarchy.AirdropManager3</RootNamespace>
-    <Version>3.0.3</Version>
+    <Version>3.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>
-	  <PackageReference Include="Lib.Harmony" Version="2.3.3" />
+	  <PackageReference Include="Lib.Harmony" Version="2.2.2" />
 	  <PackageReference Include="RestoreMonarchy.RocketRedist" Version="3.*" ExcludeAssets="runtime" />
   </ItemGroup>
 
